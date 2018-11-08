@@ -4,7 +4,7 @@ import com.netcracker.edu.fapi.models.UserModel;
 
 import java.util.List;
 
-public interface BillingAccountDataService {
+public interface UserDataService {
     List<UserModel> getAll();
     UserModel saveUser(UserModel account);
     void deleteBillingAccount(Long id);
