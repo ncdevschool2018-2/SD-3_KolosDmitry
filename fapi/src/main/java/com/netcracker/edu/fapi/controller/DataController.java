@@ -21,7 +21,7 @@ public class DataController {
     @Autowired
     private SubscriptionDataService subscriptionDataService;
 
-    @RequestMapping("/users")
+    @RequestMapping
     public ResponseEntity<List<UserModel>> getAllUsers() {
         return ResponseEntity.ok(UserDataService.getAll());
     }
@@ -32,15 +32,23 @@ public class DataController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<UserModel> saveBillingAccount(@RequestBody UserModel billingAccount /*todo server validation*/) {
-        if (billingAccount != null) {
-            return ResponseEntity.ok(UserDataService.saveUser(billingAccount));
-        }
-        return null;
+
+    public UserModel saveBillingAccount(@RequestParam String login, @RequestParam String password ) {
+            return UserDataService.saveUser(login, password);
     }
+
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public void deleteBillingAccount(@PathVariable String id) {
         UserDataService.deleteBillingAccount(Long.valueOf(id));
     }
 }
+
+
+
+
+
+
+
+
+

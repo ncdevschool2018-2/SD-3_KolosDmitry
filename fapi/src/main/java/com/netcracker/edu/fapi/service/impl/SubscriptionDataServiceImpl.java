@@ -17,8 +17,6 @@ public class SubscriptionDataServiceImpl implements SubscriptionDataService {
         subscriptions.add(new SubscriptionModel("word", 10,true, 0));
         subscriptions.add(new SubscriptionModel("powerpoint", 10,false, 0));
         subscriptions.add(new SubscriptionModel("viewer", 45,true, 0));
-        subscriptions.add(new SubscriptionModel("name", 15,false, 0));
-
     }
 
     @Override

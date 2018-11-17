@@ -50,12 +50,22 @@ public class UserDataServiceImpl implements UserDataService {
     }
 
 
-    @Override
-    public UserModel saveUser(UserModel account) {
-        RestTemplate restTemplate = new RestTemplate();
-        users.add(account);
-        return restTemplate.postForEntity(backendServerUrl + "/api/billing-accounts",
-                account, UserModel.class).getBody();
+
+    public UserModel saveUser(String login, String password) {
+        String[] subs = new String[0];
+        users.add(new UserModel(
+                login,
+                password,
+                0,
+                 subs,
+                "",
+                "",
+                "",
+                "",
+                false,
+                false
+        ));
+        return users.get(users.size() - 1);
     }
 
     @Override
