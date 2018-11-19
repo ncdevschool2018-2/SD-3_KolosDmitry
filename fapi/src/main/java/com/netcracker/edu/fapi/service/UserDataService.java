@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface UserDataService {
     List<UserModel> getAll();
-    UserModel saveUser(String login, String password);
+    UserModel saveUser(UserModel user);
     void deleteBillingAccount(Long id);
     //String saveUser(String acc);
 }

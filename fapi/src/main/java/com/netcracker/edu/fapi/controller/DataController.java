@@ -32,9 +32,11 @@ public class DataController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-
-    public UserModel saveBillingAccount(@RequestParam String login, @RequestParam String password ) {
-            return UserDataService.saveUser(login, password);
+    public ResponseEntity<UserModel> saveBillingAccount(@RequestBody UserModel userModel /*todo server validation*/) {
+        if (userModel != null) {
+            return ResponseEntity.ok(UserDataService.saveUser(userModel));
+        }
+        return null;
     }
 
 

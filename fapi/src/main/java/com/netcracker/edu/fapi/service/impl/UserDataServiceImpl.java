@@ -12,60 +12,39 @@ import java.util.List;
 @Service
 public class UserDataServiceImpl implements UserDataService {
 
-    @Value("${backend.server.url}")
+    @Value("$backend.server.url")
     private String backendServerUrl;
 
-    public List<UserModel> users = new ArrayList<>();
+//    public List<UserModel> users = new ArrayList<>();
 
-    public UserDataServiceImpl() {
-        String[] subs1 = {"word", "powerpoint"};
-        String[] subs2 = {"word"};
-        users.add(new UserModel (
-                "TheKing",
-                "1234qwer",
-                200,
-                subs1,
-                "Dimass",
-                "Kolos",
-                "15.02.1999",
-                "dima@gmail.com",
-                true,
-                false));
-        users.add(new UserModel(
-                "casualUser",
-                "12345",
-                20,
-                subs2,
-                "Ivan",
-                "Ivanov",
-                "19.05.1998",
-                "ivan@gmail.com",
-                false,
-                false));
-    }
+//    public UserDataServiceImpl() {
+//        String[] subs1 = {"word", "powerpoint"};
+//        String[] subs2 = {"word"};
+//        users.add(new UserModel (
+//                1,
+//                "TheKing",
+//                "1234qwer",
+//                200));
+//        users.add(new UserModel(
+//                2,
+//                "casualUser",
+//                "12345",
+//                20));
+//    }
 
     @Override
     public List<UserModel> getAll() {
-        return users;
+        return null;
     }
 
 
 
-    public UserModel saveUser(String login, String password) {
-        String[] subs = new String[0];
-        users.add(new UserModel(
-                login,
-                password,
-                0,
-                 subs,
-                "",
-                "",
-                "",
-                "",
-                false,
-                false
-        ));
-        return users.get(users.size() - 1);
+    @Override
+    public UserModel saveUser(UserModel user) {
+        RestTemplate restTemplate = new RestTemplate();
+        return restTemplate.
+                postForEntity(backendServerUrl + "api/usersModels", user,
+                        UserModel.class).getBody();
     }
 
     @Override
