@@ -1,0 +1,84 @@
+
+<div class="backcol" *ngIf="!isLogged">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4"><h1><p class="text-center headline">Simple Charging</p></h1></div>
+      <div class="col-md-4"><img class="img img-responsive" src="../assets/logo.png" alt="LOGO"/></div>
+      <div class="col-md-4">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <h5><p class="text-center">To continue you need to pass authentification</p></h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="text" class="form-control"
+                       placeholder="login"
+                       [value]="userInfo.login"
+                       (change)="userInfo.login = $event.target.value">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="password"
+                       [value]="userInfo.password"
+                       (change)="userInfo.password = $event.target.value"
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button
+                class="btn btn-info btn-block"
+                *ngIf="userInfo.login == 'admin' && userInfo.password == 'admin'; else adminsign"
+                routerLink="adminpage"
+                (click) = "adminclick()"
+              >Sign In</button>
+              <ng-template #adminsign>
+                <button
+                  class="btn btn-info btn-block"
+                  routerLink="balance"
+                  (click) = "userclick()"
+                >Sign In</button>
+              </ng-template>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h5>Don't have an account yet?</h5>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button class="btn btn-info btn-block" routerLink="register">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <h1><p class="text-center">We provide a wide range of applications</p></h1>
+      </div>s
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <img class="img img-responsive" src="../assets/logotypes.png" alt="logospicture"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-navbar *ngIf="userInfo.isLogged"></app-navbar>
+
+
+
+<router-outlet *ngIf="isLogged"></router-outlet>
+<!--<router-outlet name = "content"></router-outlet>-->
