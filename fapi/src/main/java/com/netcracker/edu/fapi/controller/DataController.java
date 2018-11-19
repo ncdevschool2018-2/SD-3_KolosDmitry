@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 @RestController
@@ -32,10 +33,13 @@ public class DataController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<UserModel> saveBillingAccount(@RequestBody UserModel userModel /*todo server validation*/) {
+    public ResponseEntity<UserModel> saveBillingAccount(@RequestBody UserModel userModel /*todo server validation*/)
+    throws UnsupportedEncodingException {
         if (userModel != null) {
+            System.out.println("not null");
             return ResponseEntity.ok(UserDataService.saveUser(userModel));
         }
+        System.out.println("null");
         return null;
     }
 
