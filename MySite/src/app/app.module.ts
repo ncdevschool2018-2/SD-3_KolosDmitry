@@ -20,6 +20,7 @@ import {AdminPageModule} from './admin-page/admin-page.module';
 import {FormsModule} from '@angular/forms';
 import {UserIDService} from './services/http.IDservice';
 import {TestModule} from './test/test.module';
+import {RegisterModule} from './register/register.module';
 
 const appRoutes: Routes = [
   {path: '', component: AppComponent},
@@ -36,7 +37,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     IndexComponent,
-    RegisterComponent,
     NavbarComponent,
     BalanceComponent
   ],
@@ -49,7 +49,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FilterPipeModule,
     RouterModule.forRoot(appRoutes),
-    TestModule
+    TestModule,
+    RegisterModule
   ],
   providers: [
     HttpService,

@@ -17,7 +17,9 @@ export class AppComponent implements OnChanges {
   password = this.userInfo.password;
   title = 'MySite';
 
-  constructor(private userInfo: UserIDService) {}
+  constructor(private userInfo: UserIDService) {
+  }
+
   adminclick() {
     this.userInfo.isAdmin = true;
     this.userInfo.isLogged = true;
@@ -26,6 +28,11 @@ export class AppComponent implements OnChanges {
   }
 
   userclick() {
+    this.userInfo.isLogged = true;
+    this.isLogged = this.userInfo.isLogged;
+  }
+
+  registerclick() {
     this.userInfo.isLogged = true;
     this.isLogged = this.userInfo.isLogged;
   }

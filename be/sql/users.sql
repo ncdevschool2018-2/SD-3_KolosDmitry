@@ -3,6 +3,7 @@ CREATE TABLE `users` (
   `login` varchar(50) default null,
   `password` varchar(50) default null,
   `balance` int default 0,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username_UNIQUE` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1
 
