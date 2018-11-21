@@ -1,15 +1,15 @@
 package com.netcracker.edu.fapi.models;
 
 public class SubscriptionModel {
+    private long idsubscription;
     private String name;
-    private int cost;
-    private boolean subscribe;
-    private int subscribers;
+    private long cost;
+    private long subscribers;
 
-    public SubscriptionModel(String name, int cost, boolean subscribe, int subscribers){
+    public SubscriptionModel(int id, String name, int cost, int subscribers){
+        this.setSubscribers(id);
         this.setName(name);
         this.setCost(cost);
-        this.setSubscribe(subscribe);
         this.setSubscribers(subscribers);
     }
 
@@ -18,31 +18,31 @@ public class SubscriptionModel {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getCost() {
+    public long getCost() {
         return cost;
     }
 
-    public void setCost(int cost) {
-        this.cost = cost;
-    }
-
-    public boolean isSubscribe() {
-        return subscribe;
-    }
-
-    public void setSubscribe(boolean subscribe) {
-        this.subscribe = subscribe;
-    }
-
-    public int getSubscribers() {
+    public long getSubscribers() {
         return subscribers;
     }
 
-    public void setSubscribers(int subscribers) {
+    public long getIdsubscription() {
+        return idsubscription;
+    }
+
+    public void setIdsubscription(long idsubscription) {
+        this.idsubscription = idsubscription;
+    }
+
+    public void setCost(long cost) {
+        this.cost = cost;
+    }
+
+    public void setSubscribers(long subscribers) {
         this.subscribers = subscribers;
+    }
+
+    public void setName(String name){
+        this.name = name;
     }
 }

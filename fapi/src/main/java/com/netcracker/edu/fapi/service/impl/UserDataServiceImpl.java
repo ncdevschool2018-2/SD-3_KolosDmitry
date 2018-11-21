@@ -9,6 +9,8 @@ import org.springframework.web.client.RestTemplate;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -36,7 +38,12 @@ public class UserDataServiceImpl implements UserDataService {
 
     @Override
     public List<UserModel> getAll() {
-        return null;
+        RestTemplate restTemplate = new RestTemplate();
+        UserModel[] UserModelResponse =
+                restTemplate.
+                        getForObject(backendServerUrl + "/api/billing-accounts/", UserModel[].class);
+        return UserModelResponse ==
+                null ? Collections.emptyList() : Arrays.asList(UserModelResponse);
     }
 
 

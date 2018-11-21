@@ -30,6 +30,11 @@ public class UserModelController {
         }
     }
 
+    @RequestMapping(value = "", method = RequestMethod.GET)
+    public Iterable<UserModel> getAllUsers() {
+        return userModelService.getAllUserModel();
+    }
+
     @RequestMapping(method = RequestMethod.POST)
     public UserModel saveUser(@RequestBody UserModel account) {
         return userModelService.saveUserModel(account);
