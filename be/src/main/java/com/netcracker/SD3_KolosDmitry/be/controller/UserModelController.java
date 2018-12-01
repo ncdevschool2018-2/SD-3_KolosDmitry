@@ -15,6 +15,8 @@ public class UserModelController {
 
     private UserModelService userModelService;
 
+    private UserModel loggedUser;
+
     @Autowired
     public UserModelController(UserModelService userModelService){
         this.userModelService = userModelService;
@@ -28,6 +30,11 @@ public class UserModelController {
         } else {
             return ResponseEntity.notFound().build();
         }
+    }
+
+    @RequestMapping(value = "/signIn", method = RequestMethod.GET)
+    public UserModel signInUser(@RequestParam String login, @RequestParam String password){
+        return userModelService.signInUser(login, password);
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET)

@@ -21,6 +21,7 @@ import {FormsModule} from '@angular/forms';
 import {UserIDService} from './services/http.IDservice';
 import {TestModule} from './test/test.module';
 import {RegisterModule} from './register/register.module';
+import {HttpAuthUser} from './services/http.AuthUser';
 
 const appRoutes: Routes = [
   {path: '', component: AppComponent},
@@ -37,10 +38,11 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     IndexComponent,
-    NavbarComponent,
-    BalanceComponent
+    BalanceComponent,
+    NavbarComponent
   ],
   imports: [
+    // NavbarModule,
     FormsModule,
     AdminPageModule,
     HttpClientModule,
@@ -54,7 +56,8 @@ const appRoutes: Routes = [
   ],
   providers: [
     HttpService,
-    UserIDService
+    UserIDService,
+    HttpAuthUser
   ],
   bootstrap: [AppComponent]
 })

@@ -14,7 +14,7 @@ export class HttpService {
   }
 
   getSubscriptions(): Observable<any> {
-    return this.http.get('../assets/subscriptions.json')
+    return this.http.get('http://localhost:8081/api/subscriptions/')
       .pipe(
         catchError(error => {
           alert('error');
@@ -24,7 +24,7 @@ export class HttpService {
   }
 
   getUsers(): Observable<any> {
-    return this.http.get('../assets/users.json')
+    return this.http.get('http://localhost:8081/api/users/')
       .pipe(
         catchError(error => {
           alert('error');
@@ -41,6 +41,11 @@ export class HttpService {
           return Observable.throw(error);
         })
       );
+  }
+
+  authUser(login: string, password: string): Observable<any> {
+    console.log('authenfication');
+    return this.http.get('http://localhost:8081/api/signin?login=' + login + '&password=' + password);
   }
 
   setUser(user: UserModel): Observable<UserModel> {

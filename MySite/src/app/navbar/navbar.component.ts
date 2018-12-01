@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {UserIDService} from '../services/http.IDservice';
+import {HttpAuthUser} from '../services/http.AuthUser';
 
 
 @Component({
@@ -9,7 +10,11 @@ import {UserIDService} from '../services/http.IDservice';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private userInfo: UserIDService) { }
+  private login: any;
+
+  constructor(private userInfo: UserIDService, private loggedUser: HttpAuthUser) {
+    // this.loggedUser.getLogin().subscribe(login => this.login = login);
+  }
 
   quitclick() {
     this.userInfo.isLogged = false;
@@ -17,6 +22,8 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
+    // this.loggedUser.getLogin().subscribe(login => this.login = login);
+    // console.log(this.login);
   }
 
 }

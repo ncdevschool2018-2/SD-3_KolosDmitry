@@ -9,4 +9,5 @@ public interface UserModelService {
     Iterable<UserModel> getAllUserModel();
     Optional<UserModel> getUserModelById(long id);
     void deleteUserModel(long id);
+    UserModel signInUser(String login, String password);
 }

@@ -6,6 +6,8 @@ public class SubscriptionModel {
     private long cost;
     private long subscribers;
 
+    public SubscriptionModel(){}
+
     public SubscriptionModel(int id, String name, int cost, int subscribers){
         this.setSubscribers(id);
         this.setName(name);

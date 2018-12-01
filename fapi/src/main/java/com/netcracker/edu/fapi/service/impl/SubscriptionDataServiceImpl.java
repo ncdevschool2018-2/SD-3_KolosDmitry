@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 public class SubscriptionDataServiceImpl implements SubscriptionDataService {
 
-    @Value("$backend.server.url")
+    @Value("${backend.server.url}")
     private String backendServerUrl;
 
 
@@ -24,7 +24,8 @@ public class SubscriptionDataServiceImpl implements SubscriptionDataService {
         RestTemplate restTemplate = new RestTemplate();
         SubscriptionModel[] SubscriptionModelResponse =
                 restTemplate.
-                        getForObject("http://localhost:8080/api/subscriptionsmodels/", SubscriptionModel[].class);
+                        getForObject(backendServerUrl + "api/subcriptionsmodels", SubscriptionModel[].class);
+        System.out.println(backendServerUrl + "api/subcriptionsmodels");
         return SubscriptionModelResponse ==
                 null ? Collections.emptyList() : Arrays.asList(SubscriptionModelResponse);
     }

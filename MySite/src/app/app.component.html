@@ -1,5 +1,5 @@
 
-<div class="backcol" *ngIf="!isLogged">
+<div class="backcol" *ngIf="!userInfo.isLogged">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-4"><h1><p class="text-center headline">Simple Charging</p></h1></div>
@@ -16,8 +16,8 @@
               <div class="form-group">
                 <input type="text" class="form-control"
                        placeholder="login"
-                       [value]="userInfo.login"
-                       (change)="userInfo.login = $event.target.value">
+                       [value]="login"
+                       (change)="login = $event.target.value">
               </div>
             </div>
           </div>
@@ -25,8 +25,8 @@
             <div class="col-md-12">
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="password"
-                       [value]="userInfo.password"
-                       (change)="userInfo.password = $event.target.value"
+                       [value]="password"
+                       (change)="password = $event.target.value"
                 >
               </div>
             </div>
@@ -85,5 +85,5 @@
 
 
 
-<router-outlet *ngIf="isLogged"></router-outlet>
+<router-outlet *ngIf="userInfo.isLogged"></router-outlet>
 <!--<router-outlet name = "content"></router-outlet>-->
