@@ -28,15 +28,15 @@ public class SubscriptionModel {
             joinColumns = @JoinColumn(name = "subscription_id"),
             inverseJoinColumns = @JoinColumn(name = "user_id")
     )
-    private List<UserModel> users;
-
-    public List<UserModel> getUsers(){
-        return users;
-    }
-
-    public void setUsers(List<UserModel> users){
-        this.users = users;
-    }
+//    private List<UserModel> users;
+//
+//    public List<UserModel> getUsers(){
+//        return users;
+//    }
+//
+//    public void setUsers(List<UserModel> users){
+//        this.users = users;
+//    }
 
     public long getIdsubscription() {
         return idsubscription;

@@ -2,36 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4089ab51-aa8f-40e1-9e62-b0839f4a7824" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../MySite/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MySite/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MySite/src/app/balance/balance.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/balance/balance.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MySite/src/app/balance/balance.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/balance/balance.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MySite/src/app/model/UserModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/model/UserModel.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MySite/src/app/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/navbar/navbar.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MySite/src/app/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/navbar/navbar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MySite/src/app/services/http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/services/http.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MySite/src/app/subscriptions/subscriptions.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/subscriptions/subscriptions.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/controller/UserModelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/controller/UserModelController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/entity/SubscriptionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/entity/SubscriptionModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/entity/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/entity/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/repository/SubscriptionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/repository/SubscriptionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/service/Impl/SubscriptionModelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/service/Impl/SubscriptionModelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/service/Impl/UserModelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/service/Impl/UserModelServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/service/SubscriptionModelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/service/SubscriptionModelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/service/UserModelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/service/UserModelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/DataController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/LogginnedUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/LogginnedUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/SubscriptionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/SubscriptionModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/UserDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/UserDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/UserDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/UserDataServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/controller/DataController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/controller/DataController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/controller/LogginnedUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/controller/LogginnedUserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/models/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/models/UserModel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/service/UserDataService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/service/UserDataService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/service/impl/UserDataServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/service/impl/UserDataServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -212,7 +183,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/SubscriptionDataServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
+            <state relative-caret-position="75">
               <caret line="23" column="55" lean-forward="true" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -272,7 +243,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1" />
     <option name="width" value="961" />
     <option name="height" value="788" />
@@ -446,12 +417,12 @@
       <workItem from="1543524671517" duration="16237000" />
       <workItem from="1543850097353" duration="4683000" />
       <workItem from="1543923574274" duration="5394000" />
-      <workItem from="1543932791985" duration="2577000" />
+      <workItem from="1543932791985" duration="4281000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147394000" />
+    <option name="totallyTimeSpent" value="149098000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -476,7 +447,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5508197" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5508197" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -664,7 +635,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/SubscriptionDataServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
+        <state relative-caret-position="75">
           <caret line="23" column="55" lean-forward="true" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
