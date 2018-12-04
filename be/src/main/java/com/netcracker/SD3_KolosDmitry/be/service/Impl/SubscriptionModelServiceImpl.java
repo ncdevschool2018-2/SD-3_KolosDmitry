@@ -6,6 +6,8 @@ import com.netcracker.SD3_KolosDmitry.be.service.SubscriptionModelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Optional;
+
 @Component
 public class SubscriptionModelServiceImpl implements SubscriptionModelService {
 
@@ -24,4 +26,9 @@ public class SubscriptionModelServiceImpl implements SubscriptionModelService {
 
     @Override
     public void deleteSubscription(long id){}
+
+    @Override
+    public SubscriptionModel getSubscriptionById(long id){
+        return repository.findById(id);
+    }
 }

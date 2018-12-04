@@ -1,16 +1,16 @@
 export class UserModel {
-  id: string;
-  login: string;
-  password: string;
-  balance: string;
+  id: any;
+  login: any;
+  password: any;
+  balance: any;
 
-static cloneBase (userModel: UserModel): UserModel {
-  let clonedUserModel: UserModel = new UserModel();
-  clonedUserModel.id = userModel.id;
-  clonedUserModel.login = userModel.login;
-  clonedUserModel.password = userModel.password;
-  clonedUserModel.balance = userModel.balance;
-
-  return clonedUserModel;
-  }
+// static cloneBase (userModel: UserModel): UserModel {
+//   let clonedUserModel: UserModel = new UserModel();
+//   clonedUserModel.id = userModel.id;
+//   clonedUserModel.login = userModel.login;
+//   clonedUserModel.password = userModel.password;
+//   clonedUserModel.balance = userModel.balance;
+//
+//   return clonedUserModel;
+//   }
 }

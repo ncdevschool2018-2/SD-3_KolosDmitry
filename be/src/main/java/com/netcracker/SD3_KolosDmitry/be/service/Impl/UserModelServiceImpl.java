@@ -44,7 +44,7 @@ public class UserModelServiceImpl implements UserModelService {
     }
 
     @Override
-    public Optional<UserModel> getUserModelById(long id){
+    public UserModel getUserModelById(long id){
         return userRepository.findById(id);
     }
 
@@ -52,4 +52,13 @@ public class UserModelServiceImpl implements UserModelService {
     public void deleteUserModel(long id){
         userRepository.deleteById(id);
     }
+
+    @Override
+    public Boolean subscribeUser(Long id_user, Long id_subscription){
+        Optional<UserModel> user = userRepository.findById(id_user);
+
+        return true;
+    }
+
+
 }

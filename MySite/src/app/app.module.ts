@@ -22,6 +22,7 @@ import {UserIDService} from './services/http.IDservice';
 import {TestModule} from './test/test.module';
 import {RegisterModule} from './register/register.module';
 import {HttpAuthUser} from './services/http.AuthUser';
+import {LoggedUser} from './model/LoggedUser';
 
 const appRoutes: Routes = [
   {path: '', component: AppComponent},
@@ -57,7 +58,8 @@ const appRoutes: Routes = [
   providers: [
     HttpService,
     UserIDService,
-    HttpAuthUser
+    HttpAuthUser,
+    LoggedUser
   ],
   bootstrap: [AppComponent]
 })

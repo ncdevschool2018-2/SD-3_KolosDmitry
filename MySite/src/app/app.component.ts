@@ -1,6 +1,8 @@
 import {Component, OnChanges} from '@angular/core';
 import {UserIDService} from './services/http.IDservice';
 import {HttpService} from './services/http.service';
+import {LoggedUser} from './model/LoggedUser';
+import {UserModel} from './model/UserModel';
 
 
 @Component({
@@ -20,8 +22,10 @@ export class AppComponent implements OnChanges {
   login = 'dimas';
   password = '12345';
   private logged: boolean;
+  private loginedUser: any;
+  user: UserModel;
 
-  constructor(private userInfo: UserIDService, private http: HttpService) {
+  constructor(private userInfo: UserIDService, private http: HttpService, private logUser: LoggedUser) {
   }
 
   adminclick() {
@@ -32,20 +36,23 @@ export class AppComponent implements OnChanges {
   }
 
   userclick() {
-    this.http.authUser(this.login, this.password).subscribe((logged) => {
-      this.logged = logged;
-      this.refresh(logged);
-      this.userInfo.isLogged = logged;
-      this.isLogged = this.userInfo.isLogged;
-    });
-    console.log(this.logged);
+    this.http.authUser(this.login, this.password).subscribe((user) => {
+      this.logUser.setUser(user);
+      console.log(this.logUser.getUser());
+      if (this.logUser.getUser() != null) {
+        this.logged = true;
+        this.userInfo.isLogged = true;
+        this.isLogged = this.userInfo.isLogged;
+      }
+     });
+
+    }
     // if (this.logged) {
     //   this.userInfo.isLogged = true;
     //   this.isLogged = this.userInfo.isLogged;
     // }
-  }
 
-  registerclick() {
+  registerclick(){
     this.http.authUser(this.login, this.password).subscribe((logged) => {
       this.logged = logged;
       this.refresh(logged);

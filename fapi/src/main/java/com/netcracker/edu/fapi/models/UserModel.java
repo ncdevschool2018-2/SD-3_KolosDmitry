@@ -18,8 +18,6 @@ public class UserModel {
         this.setLogin(login);
         this.setPassword(password);
         this.setBalance(balance);
-
-
     }
 
     public String getLogin() {
@@ -45,8 +43,6 @@ public class UserModel {
     public void setBalance(int balance) {
         this.balance = balance;
     }
-
-
 
     public int getId() {
         return id;

@@ -52,4 +52,9 @@ export class HttpService {
     console.log('new user');
     return this.http.post<UserModel>('http://localhost:8081/api/', user);
   }
+
+  subscribeUser(id_user: any, id_subscription: any): Observable<any> {
+    console.log('subscribeUser');
+    return this.http.get('http://localhost:8081/api/join?id_user=' + id_user + '&id_subscription=' + id_subscription);
+  }
 }

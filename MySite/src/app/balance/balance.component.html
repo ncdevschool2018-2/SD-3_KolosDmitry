@@ -5,7 +5,7 @@
         <h1><span class="align-text-top">Balance</span></h1>
       </div>
       <div class="col-md-6">
-        <h1><span id="balance" class="align-top">{{userInfo.balance}} byn</span></h1>
+        <h1><span id="balance" class="align-top">{{this.logUser.getBalance()}} byn</span></h1>
       </div>
     </div>
     <div class="row">
@@ -17,7 +17,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <p class="h3"><span class="align-text-top">You have {{userInfo.subscriptions.length}}enough money to pay for another<span id="day_num"> n</span> days</span></p>
+        <p class="h3"><span class="align-text-top">You have enough money to pay for another<span id="day_num"> n</span> days</span></p>
       </div>
     </div>
   </div>

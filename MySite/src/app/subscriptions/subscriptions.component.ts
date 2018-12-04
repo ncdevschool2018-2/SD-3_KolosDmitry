@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HttpService} from '../services/http.service';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 import {UserIDService} from '../services/http.IDservice';
+import {LoggedUser} from '../model/LoggedUser';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class SubscriptionsComponent implements OnInit {
   public formatter: boolean;
   public search = '';
 
-  constructor(private http: HttpService, private userInfo: UserIDService) {
+  constructor(private http: HttpService, private userInfo: UserIDService, private logUser: LoggedUser) {
     http.getSubscriptions()
       .subscribe(subscriptions => this.subscriptions = subscriptions);
     this.formatter = null;
@@ -70,8 +71,11 @@ export class SubscriptionsComponent implements OnInit {
 
   subscribeClick(subscription) {
     subscription.subscribe = false;
+    this.http.subscribeUser(this.logUser.getId(), subscription.idsubscription)
+      .subscribe(user => this.logUser.setUser(user));
+
     this.userInfo.subscriptions.push(subscription.name);
-    this.userInfo.balance = this.userInfo.balance - subscription.cost;
+    this.logUser.setBalance(+this.logUser.getBalance()  - +subscription.cost);
     subscription.subscribers++;
   }
 

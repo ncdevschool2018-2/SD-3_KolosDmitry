@@ -1,5 +1,6 @@
 package com.netcracker.edu.fapi.controller;
 
+import com.netcracker.edu.fapi.models.UserModel;
 import com.netcracker.edu.fapi.service.LoginnedUserService;
 import com.netcracker.edu.fapi.service.UserDataService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,15 +39,10 @@ public class LogginnedUserController {
 //    @RequestMapping(value = "/balance", method = RequestMethod.POST)
 
     @RequestMapping(value = "/signin", method = RequestMethod.GET)
-    public ResponseEntity<Boolean> signInUser(@RequestParam String login, @RequestParam String password){
+    public ResponseEntity<UserModel> signInUser(@RequestParam String login, @RequestParam String password){
         //System.out.println(login+" "+password);
 //        return ResponseEntity.ok(userDataService.singInUser(login, password));
         loggedService.setUserAccount(userDataService.singInUser(login, password));
-        if(loggedService.getUserAccount() != null){
-            return ResponseEntity.ok(true);
-        }
-        else{
-            return ResponseEntity.ok(false);
-        }
+        return ResponseEntity.ok(loggedService.getUserAccount());
     }
 }

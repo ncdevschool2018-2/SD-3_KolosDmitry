@@ -6,6 +6,7 @@ import com.sun.deploy.net.URLEncoder;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.UnsupportedEncodingException;
@@ -72,5 +73,14 @@ public class UserDataServiceImpl implements UserDataService {
     public void deleteBillingAccount(Long id) {
         RestTemplate restTemplate = new RestTemplate();
         restTemplate.delete(backendServerUrl + "/api/billing-accounts/" + id);
+    }
+
+    @Override
+    public UserModel subscribeUser(String id_user, String id_subscription){
+        RestTemplate restTemplate = new RestTemplate();
+        UserModel user =  restTemplate.getForObject(backendServerUrl + "api/userModels/join?id_user="
+                + id_user + "&id_subscription=" + id_subscription, UserModel.class);
+        if(user != null) System.out.println(user.getLogin()+" "+user.getPassword());
+        return user;
     }
 }

@@ -2,28 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4089ab51-aa8f-40e1-9e62-b0839f4a7824" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../MySite/src/app/admin-page/admin-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/admin-page/admin-page.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MySite/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MySite/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MySite/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySite/src/app/balance/balance.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/balance/balance.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySite/src/app/balance/balance.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/balance/balance.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySite/src/app/model/UserModel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/model/UserModel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MySite/src/app/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/navbar/navbar.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MySite/src/app/navbar/navbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/navbar/navbar.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MySite/src/app/services/http.IDservice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/services/http.IDservice.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../MySite/src/app/services/http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/services/http.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MySite/src/app/subscriptions/subscriptions.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../MySite/src/app/subscriptions/subscriptions.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/controller/UserModelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/controller/UserModelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/entity/SubscriptionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/entity/SubscriptionModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/entity/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/entity/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/repository/SubscriptionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/repository/SubscriptionRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/service/Impl/SubscriptionModelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/service/Impl/SubscriptionModelServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/service/Impl/UserModelServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/service/Impl/UserModelServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/service/SubscriptionModelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/service/SubscriptionModelService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/service/UserModelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../be/src/main/java/com/netcracker/SD3_KolosDmitry/be/service/UserModelService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/DataController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/DataController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/LogginnedUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/LogginnedUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/SubscriptionModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/SubscriptionModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/UserModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/UserDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/UserDataService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/SubscriptionDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/SubscriptionDataServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/UserDataServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/UserDataServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/controller/DataController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/controller/DataController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/models/SubscriptionModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/models/SubscriptionModel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/controller/LogginnedUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/controller/LogginnedUserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/models/UserModel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/models/UserModel.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/service/UserDataService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/service/UserDataService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/service/impl/SubscriptionDataServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/service/impl/SubscriptionDataServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/service/impl/UserDataServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/netcracker/edu/fapi/service/impl/UserDataServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -66,15 +73,17 @@
     <session id="704783830">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="16" />
+          <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.105" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.151" value="1" />
           <entry key="project.open.time.163" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.270" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.56" value="1" />
           <entry key="project.open.time.66" value="1" />
           <entry key="project.open.time.69" value="1" />
@@ -84,21 +93,21 @@
           <entry key="project.open.time.87" value="1" />
           <entry key="project.open.time.9" value="1" />
           <entry key="project.open.time.96" value="1" />
-          <entry key="project.opened" value="18" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="2" />
-          <entry key="java" value="26" />
+          <entry key="class" value="3" />
+          <entry key="java" value="29" />
           <entry key="properties" value="2" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="26" />
+          <entry key="CLASS" value="3" />
+          <entry key="JAVA" value="29" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="1" />
         </counts>
@@ -106,13 +115,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="14" />
-          <entry key="java" value="4281" />
+          <entry key="java" value="4832" />
           <entry key="properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4281" />
+          <entry key="JAVA" value="4832" />
           <entry key="PLAIN_TEXT" value="14" />
           <entry key="Properties" value="1" />
         </counts>
@@ -124,29 +133,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/DataController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+            <state relative-caret-position="344">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1543535975299" expanded="true" signature="1154:1729" ph="..." />
+                <marker date="1543925906986" expanded="true" signature="1154:1729" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/SubscriptionModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/LogginnedUserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="37" column="70" lean-forward="true" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
+            <state relative-caret-position="357">
+              <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#836#837#0" expanded="true" />
-                <element signature="e#902#903#0" expanded="true" />
-                <element signature="e#1095#1096#0" expanded="true" />
-                <element signature="e#1164#1165#0" expanded="true" />
-                <element signature="e#1353#1354#0" expanded="true" />
-                <element signature="e#1421#1422#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -164,8 +176,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/UserDataServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-8">
-              <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+            <state relative-caret-position="901">
+              <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/UserDataService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -176,7 +200,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/LoginnedUserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
+            <state relative-caret-position="119">
               <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -185,15 +209,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/SubscriptionDataServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+            <state relative-caret-position="307">
+              <caret line="23" column="55" lean-forward="true" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#582#605#1" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/UserModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="35">
+              <caret line="5" column="43" lean-forward="true" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -219,18 +251,18 @@
         <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/UserAccountDataController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/SubscriptionDataService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/filter/CorsFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/UserModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/SubscriptionModel.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/SubscriptionDataServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/LoginneduserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/LoginnedUserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/UserDataService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/LoginnedUserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/UserDataServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/LoginnedUserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/DataController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/LogginnedUserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/UserModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/DataController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/UserDataService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/UserDataServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/SubscriptionModel.java" />
       </list>
     </option>
   </component>
@@ -251,7 +283,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -343,6 +374,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -411,12 +443,15 @@
       <workItem from="1542764849438" duration="210000" />
       <workItem from="1542791635272" duration="29544000" />
       <workItem from="1543150049177" duration="120000" />
-      <workItem from="1543524671517" duration="12005000" />
+      <workItem from="1543524671517" duration="16237000" />
+      <workItem from="1543850097353" duration="4683000" />
+      <workItem from="1543923574274" duration="5394000" />
+      <workItem from="1543932791985" duration="2577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130508000" />
+    <option name="totallyTimeSpent" value="147394000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -428,10 +463,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21558245" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31013617" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -441,7 +476,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.37213114" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5508197" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -545,33 +580,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.34/tomcat-embed-core-8.5.34.jar!/org/apache/catalina/core/StandardWrapperValve.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2193">
+          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/DataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1543925906986" expanded="true" signature="1154:1729" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/UserDataService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/LogginnedUserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+        <state relative-caret-position="357">
+          <caret line="33" column="2" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/SubscriptionModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/UserModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -582,9 +618,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/UserDataServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/UserDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/LoginnedUserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
+        <state relative-caret-position="119">
           <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -592,50 +648,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/DataController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/SubscriptionModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1543535975299" expanded="true" signature="1154:1729" ph="..." />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/UserDataServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/models/UserModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="35">
+          <caret line="5" column="43" lean-forward="true" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/service/impl/SubscriptionDataServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+        <state relative-caret-position="307">
+          <caret line="23" column="55" lean-forward="true" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#582#605#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/netcracker/edu/fapi/controller/LogginnedUserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="37" column="70" lean-forward="true" selection-start-line="37" selection-start-column="70" selection-end-line="37" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#836#837#0" expanded="true" />
-            <element signature="e#902#903#0" expanded="true" />
-            <element signature="e#1095#1096#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-            <element signature="e#1353#1354#0" expanded="true" />
-            <element signature="e#1421#1422#0" expanded="true" />
           </folding>
         </state>
       </provider>

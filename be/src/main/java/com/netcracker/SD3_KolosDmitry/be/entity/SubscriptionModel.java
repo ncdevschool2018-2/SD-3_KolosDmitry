@@ -1,6 +1,7 @@
 package com.netcracker.SD3_KolosDmitry.be.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "subscriptions")
@@ -19,6 +20,22 @@ public class SubscriptionModel {
         this.setName(name);
         this.setCost(cost);
         this.setSubscribers(subscribers);
+    }
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "user_subscriptions",
+            joinColumns = @JoinColumn(name = "subscription_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id")
+    )
+    private List<UserModel> users;
+
+    public List<UserModel> getUsers(){
+        return users;
+    }
+
+    public void setUsers(List<UserModel> users){
+        this.users = users;
     }
 
     public long getIdsubscription() {

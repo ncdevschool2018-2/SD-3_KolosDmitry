@@ -65,6 +65,11 @@ public class DataController {
     public void deleteBillingAccount(@PathVariable String id) {
         userDataService.deleteBillingAccount(Long.valueOf(id));
     }
+
+    @RequestMapping(value = "/join", method = RequestMethod.GET)
+    public ResponseEntity<UserModel> subscribeUser(@RequestParam String id_user, @RequestParam String id_subscription){
+        return ResponseEntity.ok(userDataService.subscribeUser(id_user, id_subscription));
+    }
 }
 
 

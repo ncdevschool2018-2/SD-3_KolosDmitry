@@ -1,6 +1,10 @@
 package com.netcracker.SD3_KolosDmitry.be.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -20,6 +24,22 @@ public class UserModel {
         this.setLogin(login);
         this.setPassword(password);
         this.setBalance(balance);
+    }
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "user_subscriptions",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "subscription_id")
+    )
+    private List<SubscriptionModel> subscriptions;
+
+    public List<SubscriptionModel> getSubscriptions(){
+        return subscriptions;
+    }
+
+    public void setSubscriptions(List<SubscriptionModel> subscriptions){
+        this.subscriptions = subscriptions;
     }
 
     public long getId() {

@@ -10,5 +10,7 @@ public interface UserDataService {
     UserModel saveUser(UserModel user) throws UnsupportedEncodingException;
     void deleteBillingAccount(Long id);
     UserModel singInUser(String login, String password);
+    UserModel subscribeUser(String id_user, String id_subscription);
+
     //String saveUser(String acc);
 }
