@@ -17,7 +17,12 @@
                 <input type="text" class="form-control"
                        placeholder="login"
                        [value]="login"
-                       (change)="login = $event.target.value">
+                       (change)="login = $event.target.value"
+                       maxlength="45"
+                >
+              </div>
+              <div [hidden]="login.errors?.maxlength" class="alert alert-danger">
+                Login is too long!!!
               </div>
             </div>
           </div>
@@ -27,7 +32,15 @@
                 <input type="text" class="form-control" placeholder="password"
                        [value]="password"
                        (change)="password = $event.target.value"
+                       maxlength="45"
+                       minlength="3"
                 >
+              </div>
+              <div [hidden]="!password.errors?.maxlength" class="alert alert-danger">
+                Password is too long
+              </div>
+              <div [hidden]="!password.errors?.minlength" class="alert alert-danger">
+                Password is too small
               </div>
             </div>
           </div>
@@ -38,6 +51,8 @@
                 *ngIf="userInfo.login == 'admin' && userInfo.password == 'admin'; else adminsign"
                 routerLink="adminpage"
                 (click) = "adminclick()"
+                [disabled]="password === '' || login === '' || password.errors?.maxlength ||
+                 login.errors?.maxlength || password.errors?.minlength"
               >Sign In</button>
               <ng-template #adminsign>
                 <button
