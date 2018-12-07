@@ -39,28 +39,34 @@ export class AppComponent implements OnChanges {
     this.http.authUser(this.login, this.password).subscribe((user) => {
       this.logUser.setUser(user);
       console.log(this.logUser.getUser());
+      // let subscriptions: any[];
+      // this.http.getUserSubscriptions(this.logUser.getId())
+      //   .subscribe(subs => {
+      //     subscriptions = subs;
+      //     this.logUser.setSubcrirptions(subscriptions);
+      //   });
+      console.log(this.logUser.getSubscriptions());
       if (this.logUser.getUser() != null) {
         this.logged = true;
         this.userInfo.isLogged = true;
         this.isLogged = this.userInfo.isLogged;
       }
      });
-
     }
     // if (this.logged) {
     //   this.userInfo.isLogged = true;
     //   this.isLogged = this.userInfo.isLogged;
     // }
 
-  registerclick(){
-    this.http.authUser(this.login, this.password).subscribe((logged) => {
-      this.logged = logged;
-      this.refresh(logged);
-    });
-    if (this.logged) {
+  registerclick() {
+    // this.http.authUser(this.login, this.password).subscribe((logged) => {
+    //   this.logged = logged;
+    //   this.refresh(logged);
+    // });
+    // if (this.logged) {
       this.userInfo.isLogged = true;
       this.isLogged = this.userInfo.isLogged;
-    }
+    // }
   }
 
   refresh(logged) {

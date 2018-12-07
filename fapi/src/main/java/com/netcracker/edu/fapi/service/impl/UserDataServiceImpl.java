@@ -1,5 +1,6 @@
 package com.netcracker.edu.fapi.service.impl;
 
+import com.netcracker.edu.fapi.models.SubscriptionModel;
 import com.netcracker.edu.fapi.models.UserModel;
 import com.netcracker.edu.fapi.service.UserDataService;
 import com.sun.deploy.net.URLEncoder;
@@ -76,11 +77,31 @@ public class UserDataServiceImpl implements UserDataService {
     }
 
     @Override
-    public UserModel subscribeUser(String id_user, String id_subscription){
+    public UserModel subscribeUser(UserModel user, String id_subscription){
         RestTemplate restTemplate = new RestTemplate();
-        UserModel user =  restTemplate.getForObject(backendServerUrl + "api/userModels/join?id_user="
-                + id_user + "&id_subscription=" + id_subscription, UserModel.class);
-        if(user != null) System.out.println(user.getLogin()+" "+user.getPassword());
-        return user;
+        UserModel loguser =  restTemplate.postForEntity(backendServerUrl + "api/userModels/join?id_subscription=" + id_subscription,
+                user, UserModel.class).getBody();
+        if(loguser != null) System.out.println(loguser.getLogin()+" "+loguser.getPassword());
+        return loguser;
+    }
+
+    @Override
+    public List<SubscriptionModel> getUserSubscriptions(String id_user){
+        RestTemplate restTemplate = new RestTemplate();
+        SubscriptionModel[] SubscriptionModelResponse =
+                restTemplate.
+                        getForObject(backendServerUrl + "/api/userModels/user_subscriptions?id_user="
+                                +id_user, SubscriptionModel[].class);
+        return SubscriptionModelResponse ==
+                null ? Collections.emptyList() : Arrays.asList(SubscriptionModelResponse);
+    }
+
+    @Override
+    public UserModel unsubscribeUser(UserModel user, String id_subscription){
+        RestTemplate restTemplate = new RestTemplate();
+        UserModel loguser = restTemplate.postForEntity(backendServerUrl + "api/userModels/refuse?id_subscription="
+                + id_subscription, user, UserModel.class).getBody();
+        if(loguser != null) System.out.println(loguser.getLogin() + " " + loguser.getPassword());
+        return loguser;
     }
 }

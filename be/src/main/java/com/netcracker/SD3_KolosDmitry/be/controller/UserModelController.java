@@ -8,6 +8,7 @@ import com.netcracker.SD3_KolosDmitry.be.service.UserModelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.annotation.RequestScope;
 
 import java.util.List;
 import java.util.Optional;
@@ -53,16 +54,37 @@ public class UserModelController {
         return userModelService.saveUserModel(account);
     }
 
-    @RequestMapping(value = "/join", method = RequestMethod.GET)
-    public UserModel subscribeUser(@RequestParam  String id_user, @RequestParam String id_subscription){
-        long idUser = Long.parseLong(id_user);
+    @RequestMapping(value = "/join", method = RequestMethod.POST)
+    public UserModel subscribeUser(@RequestParam String id_subscription, @RequestBody UserModel user){
+//        long idUser = Long.parseLong(id_user);
         long idSubscription = Long.parseLong(id_subscription);
-        UserModel user = userModelService.getUserModelById(idUser);
+        System.out.println(idSubscription);
+//        UserModel user = userModelService.getUserModelById(idUser);
         SubscriptionModel subsbcription = subscriptionModelService.getSubscriptionById(idSubscription);
         List<SubscriptionModel> subscriptions = user.getSubscriptions();
+        System.out.println(user.getLogin());
+        System.out.println(subscriptions);
         subscriptions.add(subsbcription);
         user.setSubscriptions(subscriptions);
         userModelService.saveUserModel(user);
-        return userModelService.getUserModelById(idUser);
+        return user;
+    }
+
+    @RequestMapping(value = "/refuse", method = RequestMethod.POST)
+    public UserModel unsunscribeUser(@RequestParam long id_subscription, @RequestBody UserModel user){
+//        UserModel user = userModelService.getUserModelById(id_user);
+        SubscriptionModel subscription = subscriptionModelService.getSubscriptionById(id_subscription);
+        List<SubscriptionModel> subscriptions = user.getSubscriptions();
+        subscriptions.remove(subscription);
+        user.setSubscriptions(subscriptions);
+        userModelService.saveUserModel(user);
+        return user;
+    }
+
+    @RequestMapping(value = "/user_subscriptions", method = RequestMethod.GET)
+    public List<SubscriptionModel> getUserSubscriptions(@RequestParam String id_user){
+        long idUser = Long.parseLong(id_user);
+        UserModel user = userModelService.getUserModelById(idUser);
+        return userModelService.getUserSubscriptions(user);
     }
 }

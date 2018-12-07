@@ -30,4 +30,25 @@ export class LoggedUser {
   setBalance(balance: any) {
     this.user.balance = balance;
   }
+
+  getSubscriptions() {
+    return this.user.subscriptions;
+  }
+
+  setSubcrirptions(subs: any[]) {
+    this.user.subscriptions = subs;
+  }
+
+  addSubscription(sub: any) {
+    this.user.subscriptions.push(sub);
+  }
+
+  deleteSubscription(id: any) {
+    for (let i = 0; i < this.user.subscriptions.length; i++) {
+      if (this.user.subscriptions[i].id === id) {
+        let subscription = this.user.subscriptions[i];
+        this.user.subscriptions = this.user.subscriptions.filter(sub => sub !== subscription);
+      }
+    }
+  }
 }

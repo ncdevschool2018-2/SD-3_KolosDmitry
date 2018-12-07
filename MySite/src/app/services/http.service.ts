@@ -53,8 +53,18 @@ export class HttpService {
     return this.http.post<UserModel>('http://localhost:8081/api/', user);
   }
 
-  subscribeUser(id_user: any, id_subscription: any): Observable<any> {
+  subscribeUser(user: UserModel, id_subscription: any): Observable<any> {
     console.log('subscribeUser');
-    return this.http.get('http://localhost:8081/api/join?id_user=' + id_user + '&id_subscription=' + id_subscription);
+    return this.http.post<UserModel>('http://localhost:8081/api/join?id_subscription=' + id_subscription, user);
+  }
+
+  unsubscribeUser(user: UserModel, id_subscription: any): Observable<any> {
+    console.log('unsubscribeUser');
+    return this.http.post<UserModel>('http://localhost:8081/api/refuse?&id_subscription=' + id_subscription, user);
+  }
+
+  getUserSubscriptions(id_user: any): Observable<any> {
+    console.log('getUserSubscriptions');
+    return this.http.get('http://localhost:8081/api/usersubscriptions&id_user=' + id_user);
   }
 }

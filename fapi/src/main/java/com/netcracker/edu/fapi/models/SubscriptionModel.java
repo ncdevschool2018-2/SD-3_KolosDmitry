@@ -8,14 +8,16 @@ public class SubscriptionModel {
     private String name;
     private long cost;
     private long subscribers;
+    private boolean subscribe;
 
     public SubscriptionModel(){}
 
-    public SubscriptionModel(int id, String name, int cost, int subscribers){
+    public SubscriptionModel(int id, String name, int cost, int subscribers, boolean subscribe){
         this.setSubscribers(id);
         this.setName(name);
         this.setCost(cost);
         this.setSubscribers(subscribers);
+        this.setSubscribe(subscribe);
     }
 
 
@@ -49,5 +51,13 @@ public class SubscriptionModel {
 
     public void setName(String name){
         this.name = name;
+    }
+
+    public boolean isSubscribe() {
+        return subscribe;
+    }
+
+    public void setSubscribe(boolean subscribe) {
+        this.subscribe = subscribe;
     }
 }

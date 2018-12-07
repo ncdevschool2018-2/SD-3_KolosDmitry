@@ -3,17 +3,20 @@ package com.netcracker.edu.fapi.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserModel {
     private int id;
     private String login;
     private String password;
     private int balance;
+    private List<SubscriptionModel> subscriptions;
 
     public UserModel(){}
 
 
-    public UserModel(int id, String login, String password, int balance){
+    public UserModel(int id, String login, String password, int balance, List<SubscriptionModel> subscriptions){
         this.setId(id);
         this.setLogin(login);
         this.setPassword(password);
@@ -50,5 +53,13 @@ public class UserModel {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public List<SubscriptionModel> getSubscriptions() {
+        return subscriptions;
+    }
+
+    public void setSubscriptions(List<SubscriptionModel> subscriptions) {
+        this.subscriptions = subscriptions;
     }
 }

@@ -3,6 +3,7 @@ export class UserModel {
   login: any;
   password: any;
   balance: any;
+  subscriptions: any[];
 
 // static cloneBase (userModel: UserModel): UserModel {
 //   let clonedUserModel: UserModel = new UserModel();

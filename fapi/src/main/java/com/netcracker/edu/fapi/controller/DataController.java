@@ -66,9 +66,20 @@ public class DataController {
         userDataService.deleteBillingAccount(Long.valueOf(id));
     }
 
-    @RequestMapping(value = "/join", method = RequestMethod.GET)
-    public ResponseEntity<UserModel> subscribeUser(@RequestParam String id_user, @RequestParam String id_subscription){
-        return ResponseEntity.ok(userDataService.subscribeUser(id_user, id_subscription));
+    @RequestMapping(value = "/join", method = RequestMethod.POST)
+    public ResponseEntity<UserModel> subscribeUser(@RequestParam String id_subscription, @RequestBody UserModel user ){
+        return ResponseEntity.ok(userDataService.subscribeUser(user, id_subscription));
+    }
+
+    @RequestMapping(value = "/refuse", method = RequestMethod.GET)
+    public ResponseEntity<UserModel> unsubscribeUser(@RequestParam String id_subscription, @RequestBody UserModel user){
+        return ResponseEntity.ok(userDataService.unsubscribeUser(user, id_subscription));
+    }
+
+
+    @RequestMapping(value = "/usersubscriptions", method = RequestMethod.GET)
+    public ResponseEntity<List<SubscriptionModel>> getUserSubscriptions(@RequestParam String id_user){
+        return ResponseEntity.ok(userDataService.getUserSubscriptions(id_user));
     }
 }
 

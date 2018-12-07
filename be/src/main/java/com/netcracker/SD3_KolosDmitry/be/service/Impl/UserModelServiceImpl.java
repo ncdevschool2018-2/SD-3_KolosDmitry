@@ -1,5 +1,6 @@
 package com.netcracker.SD3_KolosDmitry.be.service.Impl;
 
+import com.netcracker.SD3_KolosDmitry.be.entity.SubscriptionModel;
 import com.netcracker.SD3_KolosDmitry.be.entity.UserModel;
 import com.netcracker.SD3_KolosDmitry.be.repository.UserRepository;
 import com.netcracker.SD3_KolosDmitry.be.service.UserModelService;
@@ -7,6 +8,7 @@ import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.Optional;
 
 @Component
@@ -29,7 +31,7 @@ public class UserModelServiceImpl implements UserModelService {
 //            return false;
 //        }
         UserModel user = userRepository.findByLoginAndPassword(login, password);
-        if(user != null) System.out.println(user.getLogin()+" "+user.getPassword());
+        if(user != null) System.out.println(user.getLogin()+" "+user.getPassword()+ " authority");
         return user;
     }
 
@@ -58,6 +60,11 @@ public class UserModelServiceImpl implements UserModelService {
         Optional<UserModel> user = userRepository.findById(id_user);
 
         return true;
+    }
+
+    @Override
+    public List<SubscriptionModel> getUserSubscriptions(UserModel user){
+        return user.getSubscriptions();
     }
 
 

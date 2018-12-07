@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnChanges, OnInit} from '@angular/core';
 import {HttpService} from '../services/http.service';
 import {BsModalRef, BsModalService} from 'ngx-bootstrap';
 import {UserIDService} from '../services/http.IDservice';
@@ -10,7 +10,7 @@ import {LoggedUser} from '../model/LoggedUser';
   templateUrl: './subscriptions.component.html',
   styleUrls: ['./subscriptions.component.css']
 })
-export class SubscriptionsComponent implements OnInit {
+export class SubscriptionsComponent implements OnChanges {
   public subscriptions: any[];
   public formatter: boolean;
   public search = '';
@@ -18,6 +18,7 @@ export class SubscriptionsComponent implements OnInit {
   constructor(private http: HttpService, private userInfo: UserIDService, private logUser: LoggedUser) {
     http.getSubscriptions()
       .subscribe(subscriptions => this.subscriptions = subscriptions);
+    console.log(this.subscriptions);
     this.formatter = null;
   }
 
@@ -27,7 +28,16 @@ export class SubscriptionsComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
+  ngOnChanges() {
+    for (let j = 0; j < this.subscriptions.length; j++) {
+      for (let i = 0; i < this.logUser.getSubscriptions().length; i++) {
+        if (this.logUser.getSubscriptions()[i].name === this.subscriptions[j].name) {
+          this.subscriptions[j].subscribe = true;
+        } else {
+          this.subscriptions[j].subscribe = false;
+        }
+      }
+    }
   }
 
   showSubscribed(): void {
@@ -54,9 +64,9 @@ export class SubscriptionsComponent implements OnInit {
     });
   }
 
-  contains(arr: any[], elem: any): boolean {
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] === elem.name) {
+  contains(userSubs: any[], elem: any): boolean {
+    for (let i = 0; i < userSubs.length; i++) {
+      if (userSubs[i] === elem.name) {
         return true;
       }
     }
@@ -71,17 +81,19 @@ export class SubscriptionsComponent implements OnInit {
 
   subscribeClick(subscription) {
     subscription.subscribe = false;
-    this.http.subscribeUser(this.logUser.getId(), subscription.idsubscription)
+    this.logUser.setBalance(+this.logUser.getBalance()  - +subscription.cost);
+    this.http.subscribeUser(this.logUser.getUser(), subscription.idsubscription)
       .subscribe(user => this.logUser.setUser(user));
 
     this.userInfo.subscriptions.push(subscription.name);
-    this.logUser.setBalance(+this.logUser.getBalance()  - +subscription.cost);
+
     subscription.subscribers++;
   }
 
-  unsubscribeClick(elem, arr) {
-    const index = arr.indexOf(elem.name);
+  unsubscribeClick(subscription, arr) {
+    const index = arr.indexOf(subscription.name);
     arr.splice(index, 1);
-    elem.subscribers--;
+    this.http.unsubscribeUser(this.logUser.getUser(), subscription.idsubscription)
+      .subscribe(user => this.logUser.setUser(user));
   }
 }
