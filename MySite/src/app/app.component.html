@@ -21,7 +21,7 @@
                        maxlength="45"
                 >
               </div>
-              <div [hidden]="login.errors?.maxlength" class="alert alert-danger">
+              <div [hidden]="!login.errors?.maxlength" class="alert alert-danger">
                 Login is too long!!!
               </div>
             </div>
@@ -59,6 +59,8 @@
                   class="btn btn-info btn-block"
                   routerLink="balance"
                   (click) = "userclick()"
+                  [disabled]="password === '' || login === '' || password.errors?.maxlength ||
+                    login.errors?.maxlength || password.errors?.minlength"
                 >Sign In</button>
               </ng-template>
             </div>

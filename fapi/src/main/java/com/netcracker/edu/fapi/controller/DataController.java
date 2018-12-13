@@ -71,7 +71,7 @@ public class DataController {
         return ResponseEntity.ok(userDataService.subscribeUser(user, id_subscription));
     }
 
-    @RequestMapping(value = "/refuse", method = RequestMethod.GET)
+    @RequestMapping(value = "/refuse", method = RequestMethod.POST)
     public ResponseEntity<UserModel> unsubscribeUser(@RequestParam String id_subscription, @RequestBody UserModel user){
         return ResponseEntity.ok(userDataService.unsubscribeUser(user, id_subscription));
     }

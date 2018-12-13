@@ -71,13 +71,19 @@ public class UserModelController {
     }
 
     @RequestMapping(value = "/refuse", method = RequestMethod.POST)
-    public UserModel unsunscribeUser(@RequestParam long id_subscription, @RequestBody UserModel user){
+    public UserModel unsunscribeUser(@RequestParam String id_subscription, @RequestBody UserModel user){
 //        UserModel user = userModelService.getUserModelById(id_user);
-        SubscriptionModel subscription = subscriptionModelService.getSubscriptionById(id_subscription);
+        long idSubscription = Long.parseLong(id_subscription);
+        SubscriptionModel subscription = subscriptionModelService.getSubscriptionById(idSubscription);
         List<SubscriptionModel> subscriptions = user.getSubscriptions();
-        subscriptions.remove(subscription);
+        for(int i = 0; i<subscriptions.size(); i++){
+            if(subscriptions.get(i).getName().equals(subscription.getName())){
+                subscriptions.remove(i);
+            }
+        }
         user.setSubscriptions(subscriptions);
         userModelService.saveUserModel(user);
+        System.out.println(subscriptions);
         return user;
     }
 
@@ -86,5 +92,12 @@ public class UserModelController {
         long idUser = Long.parseLong(id_user);
         UserModel user = userModelService.getUserModelById(idUser);
         return userModelService.getUserSubscriptions(user);
+    }
+
+    @RequestMapping(value = "/user_update", method = RequestMethod.POST)
+    public UserModel updateUser(@RequestParam String id_user){
+        long idUser = Long.parseLong(id_user);
+        userModelService.saveUserModel(userModelService.getUserModelById(idUser));
+        return userModelService.getUserModelById(idUser);
     }
 }

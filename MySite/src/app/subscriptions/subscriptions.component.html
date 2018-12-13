@@ -44,13 +44,13 @@
                 <td>{{subscription.cost}}</td>
                 <td>
 
-                  <button class="btn btn-info" *ngIf="!subscription.subscribe"
+                  <button class="btn btn-info" *ngIf="!contains(this.logUser.getSubscriptions(), subscription)"
                           (click)="subscribeClick(subscription)"
                   >Subscribe
                   </button>
 
 
-                  <button class="btn btn-info" *ngIf="subscription.subscribe"
+                  <button class="btn btn-info" *ngIf="contains(this.logUser.getSubscriptions(), subscription)"
                           (click)="unsubscribeClick(subscription, userInfo.subscriptions)"
                   >Unsubscribe
                   </button>

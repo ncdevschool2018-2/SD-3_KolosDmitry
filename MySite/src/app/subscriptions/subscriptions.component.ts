@@ -66,7 +66,7 @@ export class SubscriptionsComponent implements OnChanges {
 
   contains(userSubs: any[], elem: any): boolean {
     for (let i = 0; i < userSubs.length; i++) {
-      if (userSubs[i] === elem.name) {
+      if (userSubs[i].name === elem.name) {
         return true;
       }
     }
@@ -83,7 +83,12 @@ export class SubscriptionsComponent implements OnChanges {
     subscription.subscribe = false;
     this.logUser.setBalance(+this.logUser.getBalance()  - +subscription.cost);
     this.http.subscribeUser(this.logUser.getUser(), subscription.idsubscription)
-      .subscribe(user => this.logUser.setUser(user));
+      .subscribe(user => {
+        this.logUser.setUser(user);
+        console.log(this.logUser.getUser());
+        console.log(this.logUser.getSubscriptions());
+        subscription.subscribe = false;
+      });
 
     this.userInfo.subscriptions.push(subscription.name);
 
@@ -94,6 +99,11 @@ export class SubscriptionsComponent implements OnChanges {
     const index = arr.indexOf(subscription.name);
     arr.splice(index, 1);
     this.http.unsubscribeUser(this.logUser.getUser(), subscription.idsubscription)
-      .subscribe(user => this.logUser.setUser(user));
+      .subscribe(user => {
+        this.logUser.setUser(user);
+        console.log(this.logUser.getUser());
+        console.log(this.logUser.getSubscriptions());
+        subscription.subscribe = true;
+      });
   }
 }
