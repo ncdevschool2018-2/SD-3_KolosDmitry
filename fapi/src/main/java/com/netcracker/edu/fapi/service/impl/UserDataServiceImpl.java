@@ -104,4 +104,24 @@ public class UserDataServiceImpl implements UserDataService {
         if(loguser != null) System.out.println(loguser.getLogin() + " " + loguser.getPassword());
         return loguser;
     }
+
+    @Override
+    public UserModel updateUser(String id_user){
+        RestTemplate restTemplate = new RestTemplate();
+        UserModel user = restTemplate.getForObject(backendServerUrl + "api/userModels/user_update?id_user="
+                + id_user, UserModel.class);
+        if(user != null) System.out.println(user.getLogin() + "updating");
+        return user;
+    }
+
+    @Override
+    public UserModel addBalance(String id_user, String balance){
+        RestTemplate restTemplate = new RestTemplate();
+        System.out.println(id_user);
+        System.out.println(balance);
+        UserModel user = restTemplate.getForObject(backendServerUrl + "api/userModels/add_balance?id_user="
+                + id_user + "&balance=" + balance, UserModel.class);
+        if(user != null) System.out.println(user.getLogin() + " adding balance");
+        return user;
+    }
 }

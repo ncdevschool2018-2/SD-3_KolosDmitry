@@ -81,6 +81,16 @@ public class DataController {
     public ResponseEntity<List<SubscriptionModel>> getUserSubscriptions(@RequestParam String id_user){
         return ResponseEntity.ok(userDataService.getUserSubscriptions(id_user));
     }
+
+    @RequestMapping(value = "/user_update", method = RequestMethod.GET)
+    public ResponseEntity<UserModel> updateUser(@RequestParam String id_user){
+        return ResponseEntity.ok(userDataService.updateUser(id_user));
+    }
+
+    @RequestMapping(value = "/add_balance", method = RequestMethod.GET)
+    public ResponseEntity<UserModel> addBalance(@RequestParam(required = false) String id_user, @RequestParam(required = false) String balance){
+        return ResponseEntity.ok(userDataService.addBalance(id_user, balance));
+    }
 }
 
 

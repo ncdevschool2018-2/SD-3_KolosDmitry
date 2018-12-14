@@ -66,6 +66,8 @@ public class UserModelController {
         System.out.println(subscriptions);
         subscriptions.add(subsbcription);
         user.setSubscriptions(subscriptions);
+        UserModel serverUser = userModelService.getUserModelById(user.getId());
+        user.setBalance(serverUser.getBalance());
         userModelService.saveUserModel(user);
         return user;
     }
@@ -81,6 +83,8 @@ public class UserModelController {
                 subscriptions.remove(i);
             }
         }
+        UserModel serverUser = userModelService.getUserModelById(user.getId());
+        user.setBalance(serverUser.getBalance());
         user.setSubscriptions(subscriptions);
         userModelService.saveUserModel(user);
         System.out.println(subscriptions);
@@ -94,10 +98,14 @@ public class UserModelController {
         return userModelService.getUserSubscriptions(user);
     }
 
-    @RequestMapping(value = "/user_update", method = RequestMethod.POST)
+    @RequestMapping(value = "/user_update", method = RequestMethod.GET)
     public UserModel updateUser(@RequestParam String id_user){
         long idUser = Long.parseLong(id_user);
-        userModelService.saveUserModel(userModelService.getUserModelById(idUser));
         return userModelService.getUserModelById(idUser);
+    }
+
+    @RequestMapping(value = "/add_balance", method = RequestMethod.GET)
+    public UserModel addBalance(@RequestParam(required = false) String id_user, @RequestParam(required = false) String balance) {
+        return userModelService.addBalance(id_user, balance);
     }
 }

@@ -67,4 +67,14 @@ export class HttpService {
     console.log('getUserSubscriptions');
     return this.http.get('http://localhost:8081/api/usersubscriptions&id_user=' + id_user);
   }
+
+  updateUser(id_user: any): Observable<any> {
+    console.log('updating...');
+    return this.http.get('http://localhost:8081/api/user_update?id_user=' + id_user);
+  }
+
+  addBalance(id_user: any, balance: any): Observable<any> {
+    console.log('adding balance');
+    return this.http.get('http://localhost:8081/api/add_balance?id_user=' + id_user + '&balance=' + balance);
+  }
 }

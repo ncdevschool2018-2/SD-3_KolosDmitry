@@ -27,7 +27,7 @@ public class UserModel {
         this.setBalance(balance);
     }
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "user_subscriptions",
             joinColumns = @JoinColumn(name = "user_id"),

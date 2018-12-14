@@ -46,6 +46,7 @@
 
                   <button class="btn btn-info" *ngIf="!contains(this.logUser.getSubscriptions(), subscription)"
                           (click)="subscribeClick(subscription)"
+                          [disabled]="checkSolvency(subscription)"
                   >Subscribe
                   </button>
 

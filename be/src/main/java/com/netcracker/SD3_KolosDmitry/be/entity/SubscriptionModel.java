@@ -22,7 +22,7 @@ public class SubscriptionModel {
         this.setSubscribers(subscribers);
     }
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "user_subscriptions",
             joinColumns = @JoinColumn(name = "subscription_id"),

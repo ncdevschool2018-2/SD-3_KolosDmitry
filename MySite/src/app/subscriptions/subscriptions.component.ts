@@ -79,6 +79,12 @@ export class SubscriptionsComponent implements OnChanges {
     // }
   }
 
+  checkSolvency(subscription: any): boolean {
+    console.log(subscription.cost);
+    console.log(this.logUser.getBalance());
+    return this.logUser.getBalance() <= subscription.cost;
+  }
+
   subscribeClick(subscription) {
     subscription.subscribe = false;
     this.logUser.setBalance(+this.logUser.getBalance()  - +subscription.cost);

@@ -41,7 +41,7 @@ public class UserModelServiceImpl implements UserModelService {
     }
 
     @Override
-    public Iterable<UserModel> getAllUserModel(){
+    public List<UserModel> getAllUserModel(){
         return userRepository.findAll();
     }
 
@@ -65,6 +65,17 @@ public class UserModelServiceImpl implements UserModelService {
     @Override
     public List<SubscriptionModel> getUserSubscriptions(UserModel user){
         return user.getSubscriptions();
+    }
+
+    @Override
+    public UserModel addBalance(String id_user, String balance){
+        System.out.println(id_user + " " + balance);
+        long idUser = Long.parseLong(id_user);
+        int intBalance = Integer.parseInt(balance);
+        UserModel user = userRepository.findById(idUser);
+        user.setBalance(user.getBalance() + intBalance);
+        userRepository.save(user);
+        return user;
     }
 
 
