@@ -35,20 +35,6 @@ public class DataController {
         return ResponseEntity.ok(subscriptionDataService.getAll());
     }
 
-//    @RequestMapping(value = "/signin", method = RequestMethod.GET)
-//    public ResponseEntity<Boolean> signInUser(@RequestParam String login, @RequestParam String password){
-//        System.out.println(login+" "+password);
-//        return ResponseEntity.ok(userDataService.singInUser(login, password));
-//        loggedUser.setUserAccount(userDataService.singInUser(login, password));
-//        if(loggedUser.getUserAccount() != null){
-//            return ResponseEntity.ok(true);
-//        }
-//        else{
-//            return ResponseEntity.ok(false);
-//        }
-//    }
-//
-
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<UserModel> saveBillingAccount(@RequestBody UserModel userModel /*todo server validation*/)
     throws UnsupportedEncodingException {

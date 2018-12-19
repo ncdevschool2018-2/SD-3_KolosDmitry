@@ -12,7 +12,6 @@ import {UserIDService} from '../services/http.IDservice';
 })
 export class RegisterComponent {
   private repeatPassword: string;
-  private subscriptions: Subscription[] = [];
 
   constructor(private user: UserModel, private http: HttpService,
   private spinnerService: Ng4LoadingSpinnerService, private userInfo: UserIDService) {

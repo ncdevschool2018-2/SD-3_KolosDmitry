@@ -63,11 +63,6 @@ export class HttpService {
     return this.http.post<UserModel>('http://localhost:8081/api/refuse?&id_subscription=' + id_subscription, user);
   }
 
-  getUserSubscriptions(id_user: any): Observable<any> {
-    console.log('getUserSubscriptions');
-    return this.http.get('http://localhost:8081/api/usersubscriptions&id_user=' + id_user);
-  }
-
   updateUser(id_user: any): Observable<any> {
     console.log('updating...');
     return this.http.get('http://localhost:8081/api/user_update?id_user=' + id_user);

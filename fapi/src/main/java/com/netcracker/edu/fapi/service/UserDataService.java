@@ -16,6 +16,4 @@ public interface UserDataService {
     UserModel unsubscribeUser(UserModel user, String id_subscription);
     UserModel updateUser(String id_user);
     UserModel addBalance(String id_user, String balance);
-
-    //String saveUser(String acc);
 }

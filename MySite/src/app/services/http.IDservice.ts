@@ -18,34 +18,4 @@ export class UserIDService {
 
   constructor (private http: HttpClient) {
   }
-
-  // getLogin(): Observable<any>{
-  //   return this.http.get();
-  // }
-  //
-  // getPassword(): Observable<any> {
-  //   return this.http.get();
-  // }
-  //
-  // getBalance(): Observable<any> {
-  //   return this.http.get();
-  // }
-//   private loggedUserID = new BehaviorSubject(INIT_DATA);
-//   data$: Observable<any> = this.loggedUserID.asObservable();
-//
-//   constructor() {
-//     this.loggedUserID.next([-1]);
-//   }
-//
-//   getID() {
-//     return this.loggedUserID.getValue();
-//   }
-//
-//   setID(id: number) {
-//     this.loggedUserID.next([id]);
-//   }
-// }
-// @Input() loggedUserIDObs = this.userIDService.data$;
-// loggedUserID;
-// this.loggedUserIDObs.subscribe(loggedUserID => this.loggedUserID = loggedUserID);
 }

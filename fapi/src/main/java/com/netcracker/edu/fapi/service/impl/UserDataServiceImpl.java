@@ -22,29 +22,11 @@ public class UserDataServiceImpl implements UserDataService {
     @Value("${backend.server.url}")
     private String backendServerUrl;
 
-//    public List<UserModel> users = new ArrayList<>();
-
-//    public UserDataServiceImpl() {
-//        String[] subs1 = {"word", "powerpoint"};
-//        String[] subs2 = {"word"};
-//        users.add(new UserModel (
-//                1,
-//                "TheKing",
-//                "1234qwer",
-//                200));
-//        users.add(new UserModel(
-//                2,
-//                "casualUser",
-//                "12345",
-//                20));
-//    }
-
     @Override
     public UserModel singInUser(String login, String password){
         RestTemplate restTemplate = new RestTemplate();
         UserModel user =  restTemplate.getForObject(backendServerUrl + "api/userModels/signIn?login="
                 + login + "&password=" + password, UserModel.class);
-        if(user != null) System.out.println(user.getLogin()+" "+user.getPassword());
         return user;
     }
 
@@ -63,8 +45,6 @@ public class UserDataServiceImpl implements UserDataService {
     @Override
     public UserModel saveUser(UserModel user) throws UnsupportedEncodingException {
         RestTemplate restTemplate = new RestTemplate();
-//        String URL = "http://localhost:8080/api/usersModels/";
-//        URL = URLEncoder.encode(URL, "UTF-8");
         return restTemplate.
                 postForEntity(backendServerUrl + "api/userModels", user,
                         UserModel.class).getBody();
@@ -81,7 +61,6 @@ public class UserDataServiceImpl implements UserDataService {
         RestTemplate restTemplate = new RestTemplate();
         UserModel loguser =  restTemplate.postForEntity(backendServerUrl + "api/userModels/join?id_subscription=" + id_subscription,
                 user, UserModel.class).getBody();
-        if(loguser != null) System.out.println(loguser.getLogin()+" "+loguser.getPassword());
         return loguser;
     }
 
@@ -101,7 +80,6 @@ public class UserDataServiceImpl implements UserDataService {
         RestTemplate restTemplate = new RestTemplate();
         UserModel loguser = restTemplate.postForEntity(backendServerUrl + "api/userModels/refuse?id_subscription="
                 + id_subscription, user, UserModel.class).getBody();
-        if(loguser != null) System.out.println(loguser.getLogin() + " " + loguser.getPassword());
         return loguser;
     }
 
@@ -110,18 +88,14 @@ public class UserDataServiceImpl implements UserDataService {
         RestTemplate restTemplate = new RestTemplate();
         UserModel user = restTemplate.getForObject(backendServerUrl + "api/userModels/user_update?id_user="
                 + id_user, UserModel.class);
-        if(user != null) System.out.println(user.getLogin() + "updating");
         return user;
     }
 
     @Override
     public UserModel addBalance(String id_user, String balance){
         RestTemplate restTemplate = new RestTemplate();
-        System.out.println(id_user);
-        System.out.println(balance);
         UserModel user = restTemplate.getForObject(backendServerUrl + "api/userModels/add_balance?id_user="
                 + id_user + "&balance=" + balance, UserModel.class);
-        if(user != null) System.out.println(user.getLogin() + " adding balance");
         return user;
     }
 }

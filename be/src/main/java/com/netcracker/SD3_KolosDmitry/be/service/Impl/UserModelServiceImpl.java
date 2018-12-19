@@ -23,15 +23,7 @@ public class UserModelServiceImpl implements UserModelService {
 
     @Override
     public UserModel signInUser(String login, String password){
-//        if(userRepository.findByLoginAndPassword(login, password) != null) {
-//            UserModel user = userRepository.findByLoginAndPassword(login, password);
-//            return true;
-//        }
-//        else{
-//            return false;
-//        }
         UserModel user = userRepository.findByLoginAndPassword(login, password);
-        if(user != null) System.out.println(user.getLogin()+" "+user.getPassword()+ " authority");
         return user;
     }
 

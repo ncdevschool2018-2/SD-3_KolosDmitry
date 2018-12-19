@@ -9,22 +9,16 @@ import {LoggedUser} from '../model/LoggedUser';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
   private login: any;
 
   constructor(private userInfo: UserIDService, private logUser: LoggedUser) {
-    // this.loggedUser.getLogin().subscribe(login => this.login = login);
   }
 
   quitclick() {
     this.userInfo.isLogged = false;
     this.userInfo.isAdmin = false;
-  }
-
-  ngOnInit() {
-    // this.loggedUser.getLogin().subscribe(login => this.login = login);
-    // console.log(this.login);
   }
 
 }

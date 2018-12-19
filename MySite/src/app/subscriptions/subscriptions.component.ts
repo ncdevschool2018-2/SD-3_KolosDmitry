@@ -71,12 +71,6 @@ export class SubscriptionsComponent implements OnChanges {
       }
     }
     return false;
-    // const num = arr.indexOf(elem);
-    // if (num === -1) {
-    //   return false;
-    // } else {
-    //   return true;
-    // }
   }
 
   checkSolvency(subscription: any): boolean {
@@ -86,8 +80,6 @@ export class SubscriptionsComponent implements OnChanges {
   }
 
   subscribeClick(subscription) {
-    subscription.subscribe = false;
-    this.logUser.setBalance(+this.logUser.getBalance()  - +subscription.cost);
     this.http.subscribeUser(this.logUser.getUser(), subscription.idsubscription)
       .subscribe(user => {
         this.logUser.setUser(user);
@@ -95,15 +87,9 @@ export class SubscriptionsComponent implements OnChanges {
         console.log(this.logUser.getSubscriptions());
         subscription.subscribe = false;
       });
-
-    this.userInfo.subscriptions.push(subscription.name);
-
-    subscription.subscribers++;
   }
 
-  unsubscribeClick(subscription, arr) {
-    const index = arr.indexOf(subscription.name);
-    arr.splice(index, 1);
+  unsubscribeClick(subscription) {
     this.http.unsubscribeUser(this.logUser.getUser(), subscription.idsubscription)
       .subscribe(user => {
         this.logUser.setUser(user);
